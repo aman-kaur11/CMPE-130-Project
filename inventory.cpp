@@ -1,12 +1,5 @@
-/*
- * inventory.cpp
- *
- *  Created on: May 2, 2020
- *      Author: AJoy
- */
-
 #include "inventory.h"
-
+#include <string.h>
 #include <iostream>
 #include <string>
 #include "item.h"
@@ -14,6 +7,14 @@ using namespace std;
 
 inventory::inventory() {
 	numItem = 0;
+}
+
+void inventory::insert(item a) {
+	strcpy(db[numItem].name, a.name);
+		db[numItem].quantity = a.quantity;
+		db[numItem].shelfLife = a.shelfLife;
+		cout << "ITEM INSERTED SUCCESFULLY" << endl;
+		numItem++;
 }
 
 void inventory::insertItem(char itemName[], int itemQuantity, int itemShelflife) {

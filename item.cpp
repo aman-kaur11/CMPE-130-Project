@@ -1,10 +1,3 @@
-/*
- * item.cpp
- *
- *  Created on: May 2, 2020
- *      Author: AJoy
- */
-
 #include <iostream>
 #include <string>
 #include "item.h"
@@ -15,7 +8,7 @@ item::item() {
 	shelfLife = 0;
 }
 
-item::item(int q, char n[], int SL)
+item::item(char n[], int q, int SL)
 {
 	quantity = q;
 	shelfLife = SL;
@@ -68,7 +61,8 @@ ostream& operator <<(ostream& os, const item& item) {
 
 istream& operator >>(istream& is, item& item) {
 	char temp_char; //Read ','
-	is >> skipws >> item.quantity >> temp_char >> skipws >> item.name >> temp_char >> skipws >> item.shelfLife;
+	cin.getline(item.name,80);
+	is >> skipws >> item.quantity >> temp_char >> skipws >> item.shelfLife;
 	if(temp_char != ','){
 		throw "Input is not formatted correctly";
 	}

@@ -1,10 +1,3 @@
-/*
- * item.h
- *
- *  Created on: May 2, 2020
- *      Author: AJoy
- */
-
 #ifndef ITEM_H_
 #define ITEM_H_
 #include <string>
@@ -15,7 +8,7 @@ struct item {
 	char name[30];
 	int shelfLife;
 	item();
-	item(int q, char n[], int SL);
+	item(char n[], int q, int SL);
 	bool operator>(const item &other);
 	bool operator>=(const item &other);
 	bool operator<(const item &other);

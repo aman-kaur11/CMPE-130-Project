@@ -1,10 +1,3 @@
-/*
- * pantry.h
- *
- *  Created on: Apr 29, 2020
- *      Author: AJoy
- */
-
 #ifndef INVENTORY_H_
 #define INVENTORY_H_
 #include <string>
@@ -16,6 +9,7 @@ public:
 	int numItem;
 	item db[100];
 	inventory();
+	void insert(item a);
 	void insertItem(char itemName[], int itemQuantity, int itemShelflife);
 	void deleteItem(char itemName[]);
 	void updateItem(char itemName[], int itemQuantity, int itemShelflife);
