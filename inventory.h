@@ -17,7 +17,9 @@ public:
 	void printItems();
 	//sort()
 
-
+	void heapify (int n, int i);
+   	void heapsort();
+   	void printArray();
 
 };
 
